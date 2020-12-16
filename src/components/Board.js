@@ -1,119 +1,36 @@
-import React, { Component } from "react";
-import Square from "./Square";
-import { Grid } from "@material-ui/core";
-import { Button } from "@material-ui/core";
-import Container from "@material-ui/core/Container";
+import React, { Component } from 'react';
+import Box from '@material-ui/core/Box';
+import Square from './Square';
 
 export default class Board extends Component {
-  renderSquare(i) {
-    return (
-      <Square
-        value={this.props.squares[i]}
-        onClick={() => this.props.onClick(i)}
-      />
-    );
-  }
-
-  render() {
-    return (
-      <Container style={{ textAlign: "center" }}>
-        <Grid item xs={12}>
-          <div className="btnm">
-            <Button
-              style={{
-                height: "50px",
-                marginTop: "10px",
-                marginRight: "2px",
-              }}
-            >
-              {this.renderSquare(0)}
-            </Button>
-            <Button
-              style={{
-                height: "50px",
-                marginTop: "10px",
-                marginRight: "2px",
-              }}
-            >
-              {this.renderSquare(1)}
-            </Button>
-
-            <Button
-              style={{
-                height: "50px",
-                marginTop: "10px",
-                marginRight: "2px",
-              }}
-            >
-              {this.renderSquare(2)}
-            </Button>
-          </div>
-          <br></br>
-          <div className="btnm">
-            <Button
-              style={{
-                height: "50px",
-                marginRight: "2px",
-              }}
-            >
-              {this.renderSquare(3)}
-            </Button>
-            <Button
-              style={{
-                height: "50px",
-                marginRight: "2px",
-                marginTop: "3px",
-                marginBottom: "3px",
-              }}
-            >
-              {this.renderSquare(4)}
-            </Button>
-
-            <Button
-              style={{
-                height: "50px",
-                marginRight: "2px",
-
-                marginTop: "3px",
-                marginBottom: "3px",
-              }}
-            >
-              {this.renderSquare(5)}
-            </Button>
-          </div>
-          <br></br>
-          <div className="btnm">
-            <Button
-              style={{
-                height: "50px",
-                marginBottom: "10px",
-                marginRight: "2px",
-              }}
-            >
-              {this.renderSquare(6)}
-            </Button>
-            <Button
-              style={{
-                height: "50px",
-                marginBottom: "10px",
-                marginRight: "2px",
-              }}
-            >
-              {this.renderSquare(7)}
-            </Button>
-
-            <Button
-              style={{
-                height: "50px",
-                marginBottom: "10px",
-                marginRight: "2px",
-              }}
-            >
-              {this.renderSquare(8)}
-            </Button>
-          </div>
-        </Grid>
-      </Container>
-    );
-  }
+    renderSquare(i){
+        return <Square value={this.props.squares[i]}
+        onClick={()=>this.props.onClick(i)}
+        />
+    }
+    render() {
+        return (
+         <Box  className="mainbox" bgcolor="bgcolor" >
+            <div  className="mytable">
+                <div className="border-row">
+                    {this.renderSquare(0)} 
+                    {this.renderSquare(1)}
+                    {this.renderSquare(2)}
+                </div>
+                <div className="border-row">
+                    {this.renderSquare(3)}
+                    {this.renderSquare(4)}
+                    {this.renderSquare(5)}
+                </div>
+                <div className="border-row">
+                    {this.renderSquare(6)}
+                    {this.renderSquare(7)}
+                    {this.renderSquare(8)}
+                </div>
+                
+            </div>
+        </Box>    
+    
+        )
+    }
 }
