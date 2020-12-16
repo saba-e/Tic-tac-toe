@@ -4,6 +4,6 @@ This is the 3rd Excersice of IE class. Those part of codes which contain Logic p
   and the UI part is based on Material UI Docs.
   
   
-  <br>
+
   
-![](timerview.gif)
+
