@@ -85,7 +85,7 @@ export default class Game extends Component {
             <div style={{ padding: "7px" }}>
               <Typography 
              
-              color="Secondary" align="center" variant="h4">
+              color="secondary" align="center" variant="h4">
               ❌ Tic Tac Toe ⭕
               </Typography>
             </div>
